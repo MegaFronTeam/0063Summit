@@ -1,0 +1,119 @@
+// start .sStub
+.sStub {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+    @include media-breakpoint-up(lg) {
+      --sPT: #{rem(140)};
+    }
+	// --sTPB: #{rem()};
+	background: linear-gradient(164deg, #171821 0%, #872b94 89%);
+  min-height: 100vh;
+  height: 100vh;
+
+  .contant {
+    max-width: rem(1640);
+    margin: auto;
+    padding: 0 rem(20);
+    height: calc(100% - var(--sPT) - var(--sPB));
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo {
+    width: rem(200px);
+    max-width: 100%;
+    @include media-breakpoint-up(md) {
+      width: rem(314px);
+    }
+
+  }
+
+  .stub {
+    mix-blend-mode: lighten;
+    z-index: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 150vw;
+    object-fit: contain;
+    max-width: rem(1452);
+    @include media-breakpoint-up(md) {}
+  }
+
+  .h2 {
+    font-weight: 600;
+    line-height: 117%;
+    color: #fff;
+    margin-bottom: rem(36);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(56);
+    }
+  }
+
+	&__btn {
+    font-weight: 600;
+    --bs-btn-padding-y: #{rem(16)};
+    --bs-btn-padding-x: #{rem(20)};
+    @include media-breakpoint-up(lg) {
+      font-size: rem(24);
+      --bs-btn-padding-y: #{rem(22)};
+      --bs-btn-padding-x: #{rem(32)};
+    }
+	}
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    @include media-breakpoint-up(md) {
+      margin-top: rem(72);
+    }
+  }
+
+  .corner {
+    position: absolute;
+
+    &.left {
+      bottom: 0;
+      left: 0;
+      max-width: 8vw;
+    }
+    &.right {
+      top: 0;
+      right: 0;
+      max-width: 12vw;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sStub
+
+.btn-light {
+  --bs-btn-color: #{$body-color};
+  --bs-btn-bg: white;
+  --bs-btn-border-color: #f8f9fa;
+  // --bs-btn-hover-color: #000;
+  // --bs-btn-hover-bg: #d3d4d5;
+  // --bs-btn-hover-border-color: #c6c7c8;
+  // --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #c6c7c8;
+  // --bs-btn-active-border-color: #babbbc;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #000;
+  // --bs-btn-disabled-bg: #f8f9fa;
+  // --bs-btn-disabled-border-color: #f8f9fa;
+}

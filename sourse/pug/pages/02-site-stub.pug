@@ -1,0 +1,17 @@
+extends ../layout/main.pug
+
+include ../blocks/sStub/_sStub.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Заглушка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+sStub
+		
