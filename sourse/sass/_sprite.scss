@@ -32,15 +32,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
+.icon-tg {
+	$h: 28;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(38 / #{$h} *1em );
+}
 .icon-viber {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
 }
 .icon-vk {
-	$h: 24;
+	$h: 28;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(37 / #{$h} *1em );
 }
 .icon-whatsapp {
 	$h: 16;

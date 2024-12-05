@@ -2,8 +2,30 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+e.top-row.row
+				+e.col.col-md-3
+					+title('контакты')
+				+e.col.col-md-3
+					.h3 Связаться с нами
+				+e.col.col-md
+					+e.img-wrap
+						+img(src="img/svg/cp.svg", alt="")
+						+img(src="img/cp-img.png", alt="").cp-img
+			+e.contacts-row.row
+				+e.col.col-sm-6
+					+e.item 
+						+e.item-title Телефон
+						a(href="tel:+79375037843") +7 (937) 503-78-43
+				+e.col.col-sm-6
+					+e.item 
+						+e.item-title Почта
+						a(href="mailto:sammit@mail.ru") sammit@mail.ru
+				+e.col.col-sm-6
+					+e.item 
+						+e.item-title По вопросам выступления
+						a(href="tel:+79995037843") +7 (999) 503-78-43
+				+e.col.col-sm-6
+					+e.item 
+						+e.item-title По вопросам выступления
+						a(href="mailto:sammit_pr@gmail.ru") sammit_pr@gmail.ru
 	// end sContact

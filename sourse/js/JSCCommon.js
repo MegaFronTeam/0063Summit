@@ -283,7 +283,7 @@ class JSCCommon {
 		);
 	}
 	static animateScroll() {
-		$(document).on("click", " .menu li a, .scroll-link", function () {
+		$(document).on("click", ".scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", "/" + elementClick);
@@ -423,7 +423,7 @@ class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-		// JSCCommon.animateScroll();
+		JSCCommon.animateScroll();
 
 		// JSCCommon.CustomInputFile();
 	}

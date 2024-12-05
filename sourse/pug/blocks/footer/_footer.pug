@@ -1,9 +1,19 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
+			+e.row.row
 				.col
-					
-				.col Footer
-				.col
+					+e.logo-wrap(href='#'): +img(src="img/svg/logo.svg", alt="")
+					+e.text
+						.h6.ttu 3-5 декабря 2024г.
+						p Лекторий Музея «Гараж»
+				.col-md-3
+						+mnu()
 				.col-auto
+					.social-icons
+						a(href="#"): +icon('tg')
+						a(href="#"): +icon('vk')
+				.col-12
+					+e.copyr
+						p Все права защищены
+						p Сайт разработан #[a(href="#") Магвай]

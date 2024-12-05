@@ -56,6 +56,7 @@
 
 	&__btn {
     font-weight: 600;
+    border-radius: rem(50);
     --bs-btn-padding-y: #{rem(16)};
     --bs-btn-padding-x: #{rem(20)};
     @include media-breakpoint-up(lg) {

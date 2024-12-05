@@ -111,3 +111,24 @@
 	width: auto;
 	// margin-right: rem(32);
 }
+
+.section-title {
+  // position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: rem(8);
+
+  &:before {
+    content: '';
+    width: rem(9);
+    height: rem(9);
+    background: $orange;
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: rem(12);
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

@@ -472,3 +472,27 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+.section:not(.headerBlock) p {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.h3, .h6 {
+  font-weight: 600;
+}
+.btn-primary {
+  --bs-btn-color: white;
+  --bs-btn-bg: #fe3d67;
+  --bs-btn-border-color: #fe3d67;
+  --bs-btn-hover-color: white;
+
+  --skew: 20deg;
+
+  transform: skewX(calc((var(--skew) * -1)));
+  span {
+    display: inline-block;
+    transform: skewX(var(--skew));
+    text-transform: uppercase;
+  }
+}

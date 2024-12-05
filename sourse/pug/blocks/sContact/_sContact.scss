@@ -4,23 +4,106 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+    @include media-breakpoint-up(md) {
+      --sPT: #{rem(191)};
+      --sPB: #{rem(180)};
+      }
+	&__top-row {
 		// --bs-gutter-x: #{rem()};
+    --bs-gutter-x: #{rem(10)};
 		--bs-gutter-y: var(--bs-gutter-x);
 
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
 	}
-	.section-title{
-		
-	}
-	&__col{
+  &__contacts-row {
+    --bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: var(--bs-gutter-x);
+    @include media-breakpoint-up(md) {
+      max-width: 50%;
+      --bs-gutter-y: #{rem(38)};
 
-	}
-	&__item{
+      margin-top: rem(-116);
+    }
+  }
 
+  background: $body-color;
+  color: white;
+
+	&__item {
+    a {
+      font-weight: 600;
+      font-size: rem(18px);
+      color: $orange;
+      @include media-breakpoint-only(md) {
+        font-size: rem(16px);
+      }
+    }
 	}
-	&__slide{
-		height: auto;
-	}
+
+  &__item-title {
+    margin-bottom: rem(8);
+    font-weight: 500;
+  }
+
+  &__img-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 50vw;
+    margin-left: auto;
+    @include media-breakpoint-up(md) {
+      max-width: rem(460);
+    }
+    img {
+      max-width: 100%;
+      @include media-breakpoint-up(md) {
+      margin-left: 20px;
+      }
+    }
+    .cp-img {
+      position: absolute;
+      border-radius: rem(188);
+      left: 50%;
+      max-width: 80%;
+      transform: translate(-50%, -50%);
+      top: 42%;
+    }
+
+    @include media-breakpoint-up(md) {
+      &:before {
+        content: '';
+        height: 1px;
+        width: 100vw;
+        background: white;
+        opacity: .3;
+
+        position: absolute;
+        top: calc(50% - 14px);
+        right: 10%;
+        z-index: -1;
+      }
+
+      &:after {
+        content: '';
+        height: 400px;
+        width: 1px;
+        background: white;
+        opacity: .3;
+
+        position: absolute;
+        top: calc(50% - 14px);
+        left: 20%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .h3 {
+    margin-top: rem(-6);
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

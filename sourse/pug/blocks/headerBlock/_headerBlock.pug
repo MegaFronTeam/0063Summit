@@ -1,11 +1,19 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.img-wrap-bg: +img(src="img/headerBlock-bg.png").img-bg
+		+e.img-wrap: +img(src="img/svg/orange.svg", alt="").orange
+		+e.item.item-absolut
+			.h2 30<br>января
+			p 2025г.
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.row.row
+				+e.col.col-md-7 
+					+e.wrap
+						.h6 «НАциональный центр Россия»
+						p г.Москва, Краснопресненская набережная д.14
+						.section-title #[span м. Деловой центр]
+				+e.col.col-md-5 
+					.h3 РИФ 2/0: <br>Саммит развития<br>Ведущий саммит об инновациях
+		+img(src="img/svg/mouse.svg", alt="").mouse
 	// end headerBlock

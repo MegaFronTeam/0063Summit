@@ -2,8 +2,25 @@ mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
 			+e.row.row
+				+e.col.col-md-6
+					+title('О нас')
+					+e.item 
+						.secondary Участников
+						.span 283+
+					+e.item 
+						.secondary Спикеров
+						.span 35+
+					+e.item 
+						.secondary Тем выступлений
+						.span 50
+				+e.col.col-md-6
+					+e.wrap
+						.h3 Саммит как площадка для обсуждения важных вопросов
+						p Саммит развития вдохновлен легендарным проектом Рунета, Российским Интернет Форумом (РИФ), который уже 28 лет является важной вехой для технологического сообщества страны. 
+						p В 2024 году Саммит развития станет площадкой для обмена знаниями, карьерных возможностей, поддержки стартапов и разработки ключевых стратегий для укрепления технологического лидерства России.
+				+e.col.col-md-6
+					+e.scroll-wrap: +e.scroll-link.scroll-link(href='#sProgram')
+						+e.img-wrap: +img(src="img/svg/arrow-down.svg", alt="")
+						.fw-600.ttu программа
 	// end sContent

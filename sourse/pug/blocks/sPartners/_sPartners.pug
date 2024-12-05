@@ -1,0 +1,52 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+e.top-row.row
+				+e.col.col-md-3
+					+title('партнеры')
+				+e.col.col
+					.h3 Вместе мы создаём возможности
+					p Мы верим в силу сотрудничества. Наши партнеры играют решающую роль в том, чтобы наши мероприятия по всему миру стали незабываемыми
+				+e.col.col-md-3
+					.text-end: +img(src="img/svg/decor-1.svg", alt="")
+			+e.row-content.row
+				+e.col.col-md-3 
+					+e.row-title.ttu оРГАНИЗАТОР
+				+e.col.col-md-9
+					+e.items
+						+partnerCard('reddit.png')
+						+partnerCard('oseda.png')
+				+e.col.col-md-3 
+					+e.row-title.ttu при поддержке
+				+e.col.col-md-9
+					+e.items
+						+partnerCard('colab.png')
+						+partnerCard('square.png')
+						+partnerCard('mosaic.png')
+				+e.col.col-md-3 
+					+e.row-title.ttu партнеры
+				+e.col.col-md-9
+					+e.items
+						+partnerCard('reddit.png')
+						+partnerCard('colab.png')
+						+partnerCard('square.png')
+						+partnerCard('mosaic.png')
+						+partnerCard('square.png')
+						+partnerCard('oseda.png')
+				+e.col.col-md-3 
+					+e.row-title.ttu видео-партнер
+				+e.col.col-md-9
+					+e.items
+						+partnerCard('rutube.png')
+				+e.col.col-md-3 
+					+e.row-title.ttu Графический партнер
+				+e.col.col-md-9
+					+e.items
+						+partnerCard('colab.png')
+	// end sPartners
+	// end sPartners
+
+mixin partnerCard(img)
+	+e.parner-img-wrap(href='#')
+		+img(src=`img/partner-${img}` alt="")
