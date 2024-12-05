@@ -1,16 +1,16 @@
 .footer {
-		
-  --bs-gutter-x: #{rem(10)};
-  @include media-breakpoint-down(md) {
-    --bs-gutter-x: #{rem(30)};
-  }
+
 
 	margin-top: auto;
   --sPT: #{rem(60)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
-		--bs-gutter-y: var(--bs-gutter-x);
+		// --bs-gutter-y: var(--bs-gutter-x);
+    --bs-gutter-x: #{rem(10)};
+    @include media-breakpoint-down(lg) {
+      --bs-gutter-y: #{rem(30)};
+    }
 	}
 
 	background: $purple;
@@ -29,10 +29,8 @@
     }
 	}
 
-  &__text {
-    @include media-breakpoint-up(md) {
-      padding-bottom: rem(30);
-    }
+  p {
+    margin-bottom: 0;
   }
   .container {
     position: relative;
@@ -113,10 +111,6 @@
       }
 
       z-index: -1;
-    }
-
-    p {
-      margin-bottom: 0;
     }
 
     @include media-breakpoint-down(md) {
