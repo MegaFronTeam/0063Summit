@@ -1,21 +1,29 @@
-// start .sProgram
-.sProgram {
+// start .sSlider
+.sSlider {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	&__slider {
 	}
 	.section-title{
 		
 	}
-	&__col{
-		
+
+	&__img-wrap {
+		display: block;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
 	}
-	&__item{
-		
+	.swiper-slide {
+		width: auto;
+		height: 250px;
+    margin-right: rem(10);
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -25,4 +33,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sProgram
+} // end.sSlider

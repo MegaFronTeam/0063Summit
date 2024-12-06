@@ -1,0 +1,19 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		+e.slider
+			.swiper-wrapper 
+				+slideSlider(1)
+				+slideSlider(2)
+				+slideSlider(3)
+				+slideSlider(4)
+				+slideSlider(1)
+				+slideSlider(2)
+				+slideSlider(3)
+				+slideSlider(4)
+	// end sSlider
+
+mixin slideSlider(i)
+	.swiper-slide
+		+e.img-wrap(data-fancybox="gallery", href=`img/slide-${i}.png`)
+			+img(src=`img/slide-${i}.png`,'bg')

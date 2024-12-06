@@ -53,6 +53,12 @@ class JSCCommon {
 			});
 		});
 
+    Fancybox.bind("[data-fancybox]", {
+      autoFocus: false,
+      placeFocusBack: false,
+    });
+
+
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
 			if (!element) return;
@@ -413,7 +419,7 @@ class JSCCommon {
 
 	static init() {
 		this.modalCall();
-		// this.tabsCostume('tabs');
+		this.tabsCostume('tabs');
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();

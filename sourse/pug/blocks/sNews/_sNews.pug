@@ -1,0 +1,30 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+e.top-row.row
+				+e.col.col-md-3
+					+title('наши Новости')
+				+e.col.col
+					.h3 События, которые нельзя пропустить
+				+e.col.col-md-3
+					.slider-arrows: +arrow()
+			+e.slider--js
+				.swiper-wrapper 
+					.swiper-slide
+						+slide('Как агентства могут использовать саммит для создания успешных маркетинговых стратегий')
+					.swiper-slide
+						+slide('Саммит развития 2024: Новые горизонты для стартапов и ИТ-профессионалов')
+					.swiper-slide
+						+slide('Итоги глобальной инвестиционной активности 2024')
+	// end sNews
+
+mixin slide(title)
+	+b.news-slide(href='#')
+		+e.wrap 
+			+e.top 
+				+e.date.fw-500 12 декабря 2024
+				+e.title=title 
+			+e.tags 
+				+e.tag #маркетинг
+				+e.tag #агентства

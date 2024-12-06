@@ -267,11 +267,12 @@ ul {
 }
 
 .swiper-button-hand {
+  --swiperArrowSize: 20px;
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	background-color: transparent;
+	border: 2px solid transparent;
 	color: var(--swiperColorDef);
 	@include bgs; 
 	outline: none !important;
@@ -279,18 +280,21 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	box-shadow: none;
 	@include mt;
 	user-select: none;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		background-color: transparent;
+		border-color: transparent;
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
+    // fill: black;
+    stroke-width: 2px;
+    stroke: $body-color;
 	}
 
 	&::after {
