@@ -112,6 +112,11 @@
 				<!-- end sContent-->
 				<!-- start sSlider-->
 				<section class="sSlider section" id="sSlider">
+					<div class="running-line">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"></div>
+						</div>
+					</div>
 					<div class="sSlider__slider">
 						<div class="swiper-wrapper"> 
 							<div class="swiper-slide">
@@ -153,7 +158,7 @@
 				<!-- start sSchedule-->
 				<section class="sSchedule section" id="sSchedule">
 					<div class="container">
-						<div class="tabs">
+						<div class="tabs sticky-wrap">
 							<div class="sSchedule__top-row row">
 								<div class="sSchedule__col col-md-3">
 									<div class="section-title"> 
@@ -164,7 +169,7 @@
 									<div class="h3">Расписание и спикеры</div>
 								</div>
 								<div class="sSchedule__col col-md">
-									<div class="tabs__caption">
+									<div class="tabs__caption sidebar-sticky">
 										<div class="tabs__btn active">1 зал</div>
 										<div class="tabs__btn">2 зал</div>
 										<div class="tabs__btn">3 зал</div>
@@ -1278,6 +1283,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="sContact__map">
+							<div id="map"></div>
+						</div>
 					</div>
 				</section>
 				<!-- end sContact-->
@@ -1326,7 +1334,34 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="libs/select2/js/i18n/ru.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"> </script>
+		<script>var myMap;
+
+					ymaps.ready(init);
+
+					function init () {
+						myMap = new ymaps.Map('map', {
+							center:[55.752105, 37.545416],
+							clusterize: true,
+							zoom: 15
+						});
+
+						var placemark = new ymaps.Placemark([55.752105, 37.545416], {
+							balloonContent: 'г.Москва, Краснопресненская набережная д.14',
+							iconCaption: 'Лекторий Музея «Гараж»'
+						}, {
+							iconColor: '#872B95',
+						});
+						myMap.geoObjects.add(placemark);
+
+						myMap.behaviors.disable('scrollZoom');
+						if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+							myMap.behaviors.disable('drag');
+						};
+					};
+		</script>
 	</body>
 </html>

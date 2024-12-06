@@ -3,6 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+    --sPB: #{rem(180)};
+    }
 	&__top-row {
     margin-bottom: rem(46);
   }

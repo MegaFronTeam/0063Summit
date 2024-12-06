@@ -70,6 +70,26 @@
     }
   }
 
+  .tabs__caption.sticky {
+    z-index: 10;
+
+    @include media-breakpoint-down(lg) {
+      padding: rem(10);
+
+      &:before {
+        content: '';
+        background: $body-bg;
+        width: 200vw;
+        height: 100%;
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        z-index: -1;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -289,7 +289,7 @@ class JSCCommon {
 		);
 	}
 	static animateScroll() {
-		$(document).on("click", ".scroll-link", function () {
+		$(document).on("click", ".menu-item a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", "/" + elementClick);

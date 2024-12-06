@@ -1,9 +1,9 @@
 {
 	"nav":[
-		{ "name":"О саммите", "url":"#"},
-		{	"name":"Программа", "url":"#"},
-		{"name":"Новости", "url":"#"},
-		{"name":"Контакты", "url":"#"}
+		{ "name":"О саммите", "url":"#sContent"},
+		{	"name":"Программа", "url":"#sSchedule"},
+		{"name":"Новости", "url":"#sNews"},
+		{"name":"Контакты", "url":"#sContact"}
 	],
 	"social":[
 		"fb","instagram","telegram"

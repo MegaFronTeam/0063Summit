@@ -9,6 +9,7 @@ function eventHandler() {
 
 	function whenResize() {
 		JSCCommon.setFixedNav();
+    setSidebar()
 	}
 
 	window.addEventListener(
@@ -41,7 +42,30 @@ function eventHandler() {
     }
 	});
 
+  function setSidebar() {
+    let sidebar = document.querySelector(".sidebar-sticky");
+    if (!sidebar) return
+
+    if (window.innerWidth < 768) {
+      if (!sidebar.hcStickyInstance) {
+        sidebar.hcStickyInstance = new hcSticky(sidebar, {
+          stickTo: ".sticky-wrap",
+          top: 0,
+          bottomEnd: 0,
+        });
+      }
+    } else {
+      if (sidebar.hcStickyInstance) {
+        sidebar.hcStickyInstance.destroy();
+        sidebar.hcStickyInstance = null;
+      }
+    }
+  }
+
+  setSidebar()
+
 }
+
 if (document.readyState !== "loading") {
 	eventHandler();
 } else {

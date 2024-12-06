@@ -1,6 +1,9 @@
 mixin sSlider(data)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.running-line
+			.swiper-wrapper
+				.swiper-slide
 		+e.slider
 			.swiper-wrapper 
 				+slideSlider(1)

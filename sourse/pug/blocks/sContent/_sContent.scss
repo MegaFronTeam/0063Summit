@@ -5,6 +5,7 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
   @include media-breakpoint-up(md) {
+    --sPT: #{rem(180)};
     --sTPB: #{rem(126)};
   }
 	&__row {

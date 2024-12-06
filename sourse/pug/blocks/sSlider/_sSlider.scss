@@ -3,12 +3,37 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	
-	&__slider {
-	}
-	.section-title{
-		
-	}
+	position: relative;
+
+	&:before {
+    content: '';
+    right: 0;
+    top: 0;
+    transform: translate(40%,-50%);
+    width: rem(270);
+    @include block(1,1);
+    position: absolute;
+    max-width: 30%;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(135, 43, 151) 0%, rgb(254, 61, 103) 100%);
+    filter: blur(150px);
+    z-index: -1;
+  }
+
+  .running-line {
+    background: $purple;
+    padding: rem(18) 0;
+  }
+
+  &__slider {
+    margin-top: rem(10);
+
+    .swiper-slide {
+      width: auto;
+      height: 250px;
+      margin-right: rem(10);
+    }
+  }
 
 	&__img-wrap {
 		display: block;
@@ -19,11 +44,6 @@
       height: 100%;
       width: 100%;
     }
-	}
-	.swiper-slide {
-		width: auto;
-		height: 250px;
-    margin-right: rem(10);
 	}
 
 	@include media-breakpoint-up(xl) {}

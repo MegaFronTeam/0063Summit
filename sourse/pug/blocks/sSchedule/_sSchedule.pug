@@ -2,14 +2,14 @@ mixin sSchedule(data)
 	// start sSchedule
 	+b.SECTION.sSchedule.section#sSchedule&attributes(attributes)
 		.container
-			.tabs
+			.tabs.sticky-wrap
 				+e.top-row.row
 					+e.col.col-md-3
 						+title('программа')
 					+e.col.col-md-4
 						.h3 Расписание и спикеры
 					+e.col.col-md
-						.tabs__caption
+						.tabs__caption.sidebar-sticky
 							.tabs__btn.active 1 зал
 							.tabs__btn 2 зал
 							.tabs__btn 3 зал
