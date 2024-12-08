@@ -4,6 +4,7 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	position: relative;
+  --bg-run-line: #{$purple};
 
 	&:before {
     content: '';
@@ -20,11 +21,6 @@
     z-index: -1;
   }
 
-  .running-line {
-    background: $purple;
-    padding: rem(18) 0;
-  }
-
   &__slider {
     margin-top: rem(10);
 
@@ -32,6 +28,10 @@
       width: auto;
       height: 250px;
       margin-right: rem(10);
+    }
+
+    .swiper-wrapper {
+      // justify-content: center;
     }
   }
 
@@ -54,3 +54,43 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sSlider
+
+
+.running-line {
+  --icon-width: 34px;
+  @include media-breakpoint-up(md) {
+    --icon-width: 64px;
+  }
+
+  background: var(--bg-run-line, #{$body-color});
+  padding: rem(18) 0;
+  transform: translateX(calc(var(--icon-width) / 2 * -1));
+  overflow: hidden;
+  text-wrap: nowrap;
+  width: calc(100vw + 100px);
+
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: rem(32);
+  @include media-breakpoint-up(md) {
+    gap: rem(52);
+  }
+
+  color: white;
+
+  &__item {
+    font-weight: 700;
+    font-size: rem(20);
+    @include media-breakpoint-up(md) {
+      font-size: rem(36);
+    }
+    text-transform: uppercase;
+  }
+
+  img {
+    width: var(--icon-width);
+  }
+}

@@ -103,7 +103,7 @@
       top: 0;
       left: -80vw;
       @include media-breakpoint-up(lg) {
-        left: -3px;
+        left: -1px;
       }
       @include media-breakpoint-only(md) {
         right: calc(45% - 3px);

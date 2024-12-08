@@ -1,9 +1,27 @@
 mixin sSlider(data)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
-		.running-line
-			.swiper-wrapper
-				.swiper-slide
+		+b.running-line
+			+e.item
+				+img(src="img/svg/run-line-1.svg", alt="")
+			+e.item как это было
+			+e.item
+				+img(src="img/svg/run-line-2.svg", alt="")
+				+img(src="img/svg/run-line-3.svg", alt="")
+			+e.item как это было
+			+e.item
+				+img(src="img/svg/run-line-4.svg", alt="")
+			+e.item как это было
+			+e.item
+				+img(src="img/svg/run-line-1.svg", alt="")
+			+e.item как это было
+			+e.item
+				+img(src="img/svg/run-line-2.svg", alt="")
+				+img(src="img/svg/run-line-3.svg", alt="")
+			+e.item как это было
+			+e.item
+				+img(src="img/svg/run-line-4.svg", alt="")
+			+e.item как это было
 		+e.slider
 			.swiper-wrapper 
 				+slideSlider(1)
