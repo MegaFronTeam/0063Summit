@@ -126,8 +126,8 @@
     width: 140vw;
     @include block(1,1);
     border-radius: 100%;
-    filter: blur(60px);
-    background: linear-gradient(189deg, #ff2302 0%, #ff7131 4.4%, #fe3d67 12.4%, #872b94 70.62%, #171821 100%);
+    filter: blur(50px);
+    background: linear-gradient(189deg, #ff2302 0%, #872b94 15.62%, #171821 100%);
     position: absolute;
     top: 40%;
     left: -10%;
