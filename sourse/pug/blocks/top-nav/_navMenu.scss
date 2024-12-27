@@ -34,7 +34,7 @@
 		display: block;
 		height: calc(var(--h) * 12);
 		position: relative;
-		font-size: 32px;
+		font-size: rem(32px);
 		width: 1em;
 		cursor: pointer;
 	}
