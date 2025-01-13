@@ -29,6 +29,24 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
+  let runningLines = document.querySelectorAll('.running-line.swiper')
+
+  if(runningLines.length) {
+    runningLines.forEach(line => {
+      new Swiper(line, {
+        slidesPerView: 'auto',
+        // freeMode: true,
+        // spaceBetween: 4,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        speed: 10000,
+      });
+    })
+  }
+
 	const swiper4 = new Swiper(".sNews__slider--js", {
 		slidesPerView: 1,
     breakpoints: {

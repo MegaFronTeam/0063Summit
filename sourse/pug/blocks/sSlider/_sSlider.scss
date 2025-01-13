@@ -46,6 +46,7 @@
     }
 	}
 
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -55,6 +56,24 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sSlider
 
+.running-line {
+  transition-timing-function: linear !important;
+  overflow: visible;
+  max-width: 100vw;
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+    align-items: center;
+  }
+  .swiper-slide {
+    width: auto;
+    height: auto;
+    margin-right: 32px;
+    @include media-breakpoint-up(md) {
+      margin-right: 52px;
+    }
+  }
+}
 
 .running-line {
   --icon-width: 34px;
@@ -64,20 +83,20 @@
 
   background: var(--bg-run-line, #{$body-color});
   padding: rem(18) 0;
-  transform: translateX(calc(var(--icon-width) / 2 * -1));
-  overflow: hidden;
+  // transform: translateX(calc(var(--icon-width) / 2 * -1));
+  // overflow: hidden;
   text-wrap: nowrap;
-  width: calc(100vw + 100px);
+  // width: calc(100vw + 100px);
 
-  position: relative;
+  // position: relative;
   z-index: 10;
 
-  display: flex;
-  align-items: center;
-  gap: rem(32);
-  @include media-breakpoint-up(md) {
-    gap: rem(52);
-  }
+  // display: flex;
+  // align-items: center;
+  // gap: rem(32);
+  // @include media-breakpoint-up(md) {
+  //   gap: rem(52);
+  // }
 
   color: white;
 

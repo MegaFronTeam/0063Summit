@@ -1,27 +1,35 @@
 mixin sSlider(data)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
-		+b.running-line
-			+e.item
-				+img(src="img/svg/run-line-1.svg", alt="")
-			+e.item как это было
-			+e.item
-				+img(src="img/svg/run-line-2.svg", alt="")
-				+img(src="img/svg/run-line-3.svg", alt="")
-			+e.item как это было
-			+e.item
-				+img(src="img/svg/run-line-4.svg", alt="")
-			+e.item как это было
-			+e.item
-				+img(src="img/svg/run-line-1.svg", alt="")
-			+e.item как это было
-			+e.item
-				+img(src="img/svg/run-line-2.svg", alt="")
-				+img(src="img/svg/run-line-3.svg", alt="")
-			+e.item как это было
-			+e.item
-				+img(src="img/svg/run-line-4.svg", alt="")
-			+e.item как это было
+		+b.running-line.swiper
+			.swiper-wrapper
+				.swiper-slide
+					+e.item
+						+img(src="img/svg/run-line-1.svg", alt="")
+				.swiper-slide
+					+e.item регистрация
+				.swiper-slide
+					+e.item
+						+img(src="img/svg/run-line-2.svg", alt="")
+						+img(src="img/svg/run-line-3.svg", alt="")
+				.swiper-slide
+					+e.item 30 января
+				.swiper-slide
+					+e.item
+						+img(src="img/svg/run-line-4.svg", alt="")
+				.swiper-slide
+					+e.item регистрация
+				.swiper-slide
+					+e.item
+						+img(src="img/svg/run-line-1.svg", alt="")
+				.swiper-slide
+					+e.item 30 января
+				.swiper-slide
+					+e.item
+						+img(src="img/svg/run-line-2.svg", alt="")
+						+img(src="img/svg/run-line-3.svg", alt="")
+				.swiper-slide
+					+e.item регистрация
 		+e.slider
 			.swiper-wrapper 
 				+slideSlider(1)

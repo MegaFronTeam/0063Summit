@@ -39,7 +39,7 @@
 		text-align: start;
 		position: relative;
 		z-index: 1;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			padding-left: rem(30);
 			margin-top: rem(-7);
 
@@ -104,8 +104,8 @@
 				left: -1px;
 			}
 			@include media-breakpoint-only(md) {
-				right: calc(45% - 3px);
-				left: auto;
+				// right: calc(45% - 3px);
+				// left: auto;
 			}
 
 			z-index: -1;
