@@ -164,6 +164,10 @@
 		height: rem(64);
 		background: white;
 		border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
 	}
 
 	a:hover .icon {
