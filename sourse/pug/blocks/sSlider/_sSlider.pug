@@ -3,33 +3,22 @@ mixin sSlider(data)
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
 		+b.running-line.swiper
 			.swiper-wrapper
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-1.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-2.svg", alt="")
-						+img(src="img/svg/run-line-3.svg", alt="")
-				.swiper-slide
-					+e.item 30 января
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-4.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-1.svg", alt="")
-				.swiper-slide
-					+e.item 30 января
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-2.svg", alt="")
-						+img(src="img/svg/run-line-3.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
+				- for (let i = 0; i < 10; i++)
+					.swiper-slide
+						+e.item
+							+img(src="img/svg/run-line-1.svg", alt="")
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-2.svg", alt="")
+							+img(src="img/svg/run-line-3.svg", alt="")
+						+e.item 30 января
+						+e.item
+							+img(src="img/svg/run-line-4.svg", alt="")
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-1.svg", alt="")
+							+img(src="img/svg/run-line-3.svg", alt="")
+						+e.item 30 января
 		+e.slider
 			.swiper-wrapper 
 				+slideSlider(1)

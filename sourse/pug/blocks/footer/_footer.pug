@@ -19,36 +19,19 @@ mixin footer()
 						p Сайт разработан #[a(href="#") Магвай]
 		+b.running-line.swiper
 			.swiper-wrapper
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-5.svg", alt="")
-						+img(src="img/svg/run-line-6.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-4.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-5.svg", alt="")
-						+img(src="img/svg/run-line-6.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-4.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-5.svg", alt="")
-						+img(src="img/svg/run-line-6.svg", alt="")
-				.swiper-slide
-					+e.item регистрация
-				.swiper-slide
-					+e.item
-						+img(src="img/svg/run-line-4.svg", alt="")
+				- for (let i = 0; i < 10; i++)
+					.swiper-slide
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-5.svg", alt="")
+							+img(src="img/svg/run-line-6.svg", alt="")
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-4.svg", alt="")
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-5.svg", alt="")
+							+img(src="img/svg/run-line-6.svg", alt="")
+						+e.item регистрация
+						+e.item
+							+img(src="img/svg/run-line-4.svg", alt="")

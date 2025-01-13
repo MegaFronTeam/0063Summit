@@ -42,7 +42,7 @@ function eventHandler() {
           delay: 0,
           disableOnInteraction: false,
         },
-        speed: 10000,
+        speed: 25000,
       });
     })
   }
